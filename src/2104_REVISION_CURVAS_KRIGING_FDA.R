@@ -24,12 +24,12 @@ coordenadas <- coordenadas %>%
 files_sujetos <- list.files(path="input",pattern=".xlsx")
 list <- map(1:21,lectura_datos)
 
-matrix_to_fda <- map(list,turn_it_to_matrix_to_fda)
+matrix_to_fda <- map(list, turn_it_to_matrix_to_fda)
 
-spline_basis=create.bspline.basis(rangeval=c(1,228),nbasis=30)
-fitted_basis<-smooth.basis(y=as.matrix(matrix_to_fda), fdParobj=spline_basis)
-
-W.pca = pca.fd(fitted_basis$fd, nharm=2)
+spline_basis <- create.bspline.basis(rangeval = c(1, 228), nbasis = 30)
+fitted_basis <- smooth.basis(y = as.matrix(matrix_to_fda[[1]]), fdParobj = spline_basis)
+matrix_to_fda[[1]] %>% dim
+W.pca <- pca.fd(fitted_basis$fd, nharm=2)
 plot(W.pca$harmonics, lwd=3)
 sum(W.pca$varprop)
 names(W.pca)
