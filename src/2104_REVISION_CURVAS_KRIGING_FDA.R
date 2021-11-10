@@ -21,7 +21,9 @@ coordenadas <- fread("input/coor1.txt")
 coordenadas <- coordenadas %>%
   cbind(data.frame(ELECTRODO = paste0("E",1:21))) %>% 
   mutate(z=as.numeric(as.character(str_replace_all(z,",","\\."))))
+
 files_sujetos <- list.files(path="input",pattern=".xlsx")
+
 list <- map(1:21,lectura_datos)
 
 matrix_to_fda <- map(list, turn_it_to_matrix_to_fda)
