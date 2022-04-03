@@ -1,0 +1,13 @@
+Package: SpatFD
+Type: Package
+Title: Functional Kriging, Functional Cokriging and Optimal Spatial Sampling of Functional Data
+Version: 0.1.0
+Authors@R: c(person("Angie", "Villamil", role = c("aut", "cre"),email = "acvillamils@unal.edu.co"),
+            person("Martha", "Bohorquez", role = "aut", email = "mpbohorquezc@unal.edu.co"))
+Author: Angie Villamil and Martha Bohorquez
+Maintainer: Angie Villamil <acvillamils@unal.edu.co>
+Description: Functional Kriging, Functional Cokriging and Optimal Spatial Sampling of Functional Data.
+Imports: fda, gstat, sp
+License: GPL-2
+Encoding: UTF-8
+LazyData: true

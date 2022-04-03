@@ -1,0 +1,22 @@
+exportPattern("^[[:alpha:]]+")
+
+#fda functions
+importFrom("fda", "is.fdSmooth")
+importFrom("fda", "is.fd")
+importFrom("fda", "vec2Lfd")
+importFrom("fda", "create.bspline.basis")
+importFrom("fda", "create.fourier.basis")
+importFrom("fda", "fdPar")
+importFrom("fda", "smooth.basis")
+importFrom("fda", "pca.fd")
+importFrom("fda", "fd")
+
+#gstat Functions
+importFrom("gstat", "gstat")
+importFrom("gstat", "variogram")
+importFrom("gstat", "fit.variogram")
+importFrom("gstat", "fit.lmc")
+importFrom("gstat", "krige")
+
+#sp functions
+importFrom("sp", "coordinates<-")
